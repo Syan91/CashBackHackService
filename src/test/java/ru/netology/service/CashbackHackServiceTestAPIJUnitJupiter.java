@@ -1,9 +1,11 @@
 package ru.netology.service;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
-public class CashbackHackServiceTest {
-    @org.junit.Test
+import static org.junit.Assert.assertEquals;
+
+public class CashbackHackServiceTestAPIJUnitJupiter {
+    @Test
     public void shouldReturnThousandIfAmountIsZero(){
         CashbackHackService service = new CashbackHackService();
         int amount = 0;
@@ -11,7 +13,7 @@ public class CashbackHackServiceTest {
         int expected = 1000;
         assertEquals(expected, actual);
     }
-    @org.junit.Test
+    @Test
     public void shouldCalculateRemainder(){
         CashbackHackService service = new CashbackHackService();
         int amount = 100;
@@ -19,7 +21,7 @@ public class CashbackHackServiceTest {
         int expected = 900 ;
         assertEquals(expected, actual);
     }
-    @org.junit.Test
+    @Test
     public void shouldReturnZeroIfAmountIsEqualBoundary(){
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
@@ -27,7 +29,7 @@ public class CashbackHackServiceTest {
         int expected = 0 ;
         assertEquals(expected, actual);
     }
-    @org.junit.Test
+    @Test
     public void shouldCalculateIfAmountLessThanBoundary(){
         CashbackHackService service = new CashbackHackService();
         int amount = 999;
@@ -35,7 +37,7 @@ public class CashbackHackServiceTest {
         int expected = 1 ;
         assertEquals(expected, actual);
     }
-    @org.junit.Test
+    @Test
     public void shouldCalculateIfAmountMoreThanBoundary(){
         CashbackHackService service = new CashbackHackService();
         int amount = 1001;
@@ -43,7 +45,7 @@ public class CashbackHackServiceTest {
         int expected = 999 ;
         assertEquals(expected, actual);
     }
-    @org.junit.Test
+    @Test
     public void shouldCalculateIfAmountIsMinusOne(){
         CashbackHackService service = new CashbackHackService();
         int amount = -1;
